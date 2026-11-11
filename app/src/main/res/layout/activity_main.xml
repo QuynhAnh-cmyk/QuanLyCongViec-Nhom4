@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@drawable/bg_page" android:paddingStart="20dp" android:paddingEnd="20dp" android:paddingTop="20dp" android:paddingBottom="16dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="XIN CHÀO, CHÚC BẠN NGÀY TỐT LÀNH" android:textColor="@color/primary" android:letterSpacing="0.07" android:textSize="11sp" android:textStyle="bold"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Công việc của tôi ✨" android:textColor="@color/text_primary" android:textSize="29sp" android:textStyle="bold"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Lên kế hoạch, hoàn thành mục tiêu mỗi ngày" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:background="@drawable/bg_card" android:elevation="3dp" android:orientation="horizontal" android:padding="18dp" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <TextView android:id="@+id/txtTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="27sp" android:textStyle="bold" android:textColor="@color/primary"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tổng số" android:textSize="12sp" android:textColor="@color/text_secondary"/>
+        </LinearLayout>
+        <View android:layout_width="1dp" android:layout_height="48dp" android:background="@color/border"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <TextView android:id="@+id/txtDone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="27sp" android:textStyle="bold" android:textColor="@color/green"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đã xong" android:textSize="12sp" android:textColor="@color/text_secondary"/>
+        </LinearLayout>
+        <View android:layout_width="1dp" android:layout_height="48dp" android:background="@color/border"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <TextView android:id="@+id/txtPending" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="27sp" android:textStyle="bold" android:textColor="@color/orange"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chưa xong" android:textSize="12sp" android:textColor="@color/text_secondary"/>
+        </LinearLayout>
+    </LinearLayout>
+    <EditText android:id="@+id/edtSearch" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="22dp" android:background="@drawable/bg_input" android:hint="⌕   Tìm kiếm công việc..." android:inputType="text" android:singleLine="true" android:paddingStart="16dp" android:paddingEnd="16dp" android:textSize="14sp" android:textColor="@color/text_primary" android:textColorHint="@color/text_secondary"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:orientation="horizontal">
+        <Button android:id="@+id/btnAll" android:layout_width="0dp" android:layout_height="46dp" android:layout_weight="1" android:text="Tất cả" android:textAllCaps="false" android:textSize="12sp"/>
+        <Button android:id="@+id/btnPending" android:layout_width="0dp" android:layout_height="46dp" android:layout_weight="1" android:layout_marginStart="5dp" android:text="Chưa xong" android:textAllCaps="false" android:textSize="12sp"/>
+        <Button android:id="@+id/btnDone" android:layout_width="0dp" android:layout_height="46dp" android:layout_weight="1" android:layout_marginStart="5dp" android:text="Đã xong" android:textAllCaps="false" android:textSize="12sp"/>
+    </LinearLayout>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="19dp" android:text="Danh sách công việc" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+    <TextView android:id="@+id/txtEmpty" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center" android:text="Chưa có công việc nào.\nHãy thêm công việc đầu tiên!" android:textSize="15sp" android:lineSpacingExtra="7dp" android:textColor="@color/text_secondary" android:visibility="gone"/>
+    <ListView android:id="@+id/listTasks" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="12dp" android:divider="@android:color/transparent" android:dividerHeight="11dp" android:scrollbars="none" android:clipToPadding="false" android:paddingBottom="7dp"/>
+    <Button android:id="@+id/btnAdd" android:layout_width="match_parent" android:layout_height="58dp" android:layout_marginTop="10dp" android:background="@drawable/bg_primary" android:backgroundTint="@null" android:text="+   Thêm công việc mới" android:textAllCaps="false" android:textColor="@color/white" android:textStyle="bold" android:textSize="16sp"/>
+</LinearLayout>
